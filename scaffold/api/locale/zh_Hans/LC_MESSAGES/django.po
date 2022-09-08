@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-08 10:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\scaffold\api\decorator.py:20
+msgid "You don't have permission"
+msgstr "你没有权限"
+
+#: .\scaffold\api\models.py:16
+msgid "Create time"
+msgstr "创建时间"
+
+#: .\scaffold\api\models.py:17
+msgid "Update time"
+msgstr "更新时间"
+
+#: .\scaffold\api\models.py:18
+msgid "Delete status"
+msgstr "是否已删除"
+
+#: .\scaffold\api\models.py:31
+msgid "Item name"
+msgstr "品名"
+
+#: .\scaffold\api\models.py:32
+msgid "Item stock"
+msgstr "库存"
+
+#: .\scaffold\api\models.py:33
+msgid "Item sold"
+msgstr "销量"
+
+#: .\scaffold\api\models.py:34
+msgid "Item last sold time"
+msgstr "上次交易时间"
+
+#: .\scaffold\api\models.py:37 .\scaffold\api\models.py:38
+msgid "Item"
+msgstr "物品"
+
+#: .\scaffold\api\models.py:51
+msgid "Item ID"
+msgstr "物品ID"
+
+#: .\scaffold\api\models.py:52
+msgid "Item quantity"
+msgstr "物品量"
+
+#: .\scaffold\api\models.py:55 .\scaffold\api\models.py:56
+msgid "Order"
+msgstr "订单"
+
+#: .\scaffold\api\models.py:67
+msgid "No such item"
+msgstr "没有这个物品"
+
+#: .\scaffold\api\models.py:69
+msgid "Not valid order"
+msgstr "非法求购请求"
+
+#: .\scaffold\api\models.py:71
+msgid "Not enough stock"
+msgstr "没有足够库存"

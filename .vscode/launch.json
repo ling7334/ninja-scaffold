@@ -1,0 +1,83 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Django runserver",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\scaffold\\manage.py",
+            "args": [
+                "runserver"
+            ],
+            "envFile": "${workspaceFolder}/.env",
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Django test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\scaffold\\manage.py",
+            "args": [
+                "test"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Django makemigrations",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\scaffold\\manage.py",
+            "args": [
+                "makemigrations"
+            ],
+            "envFile": "${workspaceFolder}/.env",
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Django migrate",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\scaffold\\manage.py",
+            "args": [
+                "migrate"
+            ],
+            "envFile": "${workspaceFolder}/.env",
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Django makemessages",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\scaffold\\manage.py",
+            "args": [
+                "makemessages",
+                "-l",
+                "en_us",
+                "-l",
+                "zh_Hans"
+            ],
+            "envFile": "${workspaceFolder}/.env",
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Django compilemessages",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\scaffold\\manage.py",
+            "args": [
+                "compilemessages"
+            ],
+            "envFile": "${workspaceFolder}/.env",
+            "django": true,
+            "justMyCode": true
+        }
+    ]
+}

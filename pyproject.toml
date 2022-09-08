@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "ninja-example"
+version = "0.1.0"
+description = ""
+authors = ["Flynn <ling7334@gmail.com>"]
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django-ninja = "^0.19.1"
+psycopg2-binary = "^2.9.3"
+sentry-sdk = {extras = ["mypy"], version = "^1.9.7"}
+orjson = { version = "^3.7.6", optional = true }
+django-simpleui = { version = "^2022.7.29", optional = true }
+
+[tool.poetry.extras]
+sentry = ["sentry-sdk"]
+orjson = ["orjson"]
+simpleui = ["django-simpleui"]
+all = ["sentry-sdk", "django-simpleui", "orjson"]
+
+[tool.poetry.dev-dependencies]
+django-stubs = { extras = ["compatible-mypy"], version = "^1.12.0" }
+mypy = "^0.961"
+flake8 = "^4.0.1"
+black = "^22.3.0"
+isort = "^5.10.1"
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main", "pydantic.mypy"]
+
+follow_imports = "silent"
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+check_untyped_defs = true
+no_implicit_reexport = true
+
+# for strict mypy: (this is the tricky one :-))
+disallow_untyped_defs = true
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+warn_untyped_fields = true
+
+[tool.django-stubs]
+django_settings_module = "scaffold.settings"
+
+[tool.isort]
+skip = ["migrations"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
