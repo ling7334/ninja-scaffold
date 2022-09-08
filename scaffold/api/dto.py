@@ -16,7 +16,7 @@ class ValidateErrResponse(Schema):
 
 class ItemRequest(Schema):
     name: str = Field(..., max_length=255)
-    stock: int
+    stock: int = Field(0, gt=0)
     sold: int = Field(0, ge=0)
     last: datetime = Field(datetime.now())
 
