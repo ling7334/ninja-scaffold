@@ -178,6 +178,6 @@ if settings.SENTRY_DSN:
         # environment variable, or infer a git commit
         # SHA as release, however you may want to set
         # something more human-readable.
-        # release=settings.VERSION,
+        release="V1.0.1",
         environment=settings.ENV_NAME,
     )

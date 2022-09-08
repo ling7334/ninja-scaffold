@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ninja-example"
-version = "0.1.0"
+version = "1.0.1"
 description = ""
 authors = ["Flynn <ling7334@gmail.com>"]
 
@@ -13,7 +13,7 @@ default = true
 python = "^3.10"
 django-ninja = "^0.19.1"
 psycopg2-binary = "^2.9.3"
-sentry-sdk = {extras = ["mypy"], version = "^1.9.7"}
+sentry-sdk = { extras = ["mypy"], version = "^1.9.7" }
 orjson = { version = "^3.7.6", optional = true }
 django-simpleui = { version = "^2022.7.29", optional = true }
 
