@@ -13,9 +13,9 @@ jobs:
       - name: Create Sentry release
         uses: getsentry/action-release@V1
         env:
-          SENTRY_AUTH_TOKEN: ${{ SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ SENTRY_PROJECT }}
+          SENTRY_AUTH_TOKEN: 15920d47d0ae42c0bcc8c6f8356c6f6fb08a563f18f24237b4ec2a2b9bb6f47b
+          SENTRY_ORG: f6abfad2d6df
+          SENTRY_PROJECT: django
           # SENTRY_URL: https://sentry.io/
         with:
           environment: production
