@@ -11,11 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Create Sentry release
-        uses: getsentry/action-release@V1
+        uses: getsentry/action-release@v1
         env:
-          SENTRY_AUTH_TOKEN: 15920d47d0ae42c0bcc8c6f8356c6f6fb08a563f18f24237b4ec2a2b9bb6f47b
-          SENTRY_ORG: f6abfad2d6df
-          SENTRY_PROJECT: django
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
           # SENTRY_URL: https://sentry.io/
         with:
           environment: production
