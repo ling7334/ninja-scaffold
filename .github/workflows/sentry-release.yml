@@ -1,15 +1,15 @@
 name: Sentry Release
 
-# Controls when the workflow will run
 on: 
   release:
     types: [published]
 
 jobs:
   notify:
+    name: Notiy sentry a new release is publised
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Create Sentry release
         uses: getsentry/action-release@v1
         env:
@@ -17,5 +17,5 @@ jobs:
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
           # SENTRY_URL: https://sentry.io/
-        with:
-          environment: production
+      - name: Test printing your secret (Remove this step in production)
+        run: echo ${{ secrets.SENTRY_ORG }}
