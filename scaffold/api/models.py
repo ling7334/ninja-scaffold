@@ -2,6 +2,7 @@ from datetime import datetime
 
 from django.db import models
 from django.db.transaction import atomic
+from django.db.utils import DataError
 from django.utils.translation import gettext as _
 from ninja import Schema
 from ninja.errors import ValidationError
@@ -37,9 +38,11 @@ class Item(BaseModel):
         verbose_name = _("Item")
         verbose_name_plural = _("Item")
 
-    def buy(self, buy: int):
-        self.stock = models.F("stock") - buy
-        self.sold = models.F("sold") + buy
+    def buy(self, quantity: int):
+        if quantity <= 0:
+            raise DataError(_("Error: quantity must large than 0"))
+        self.stock = models.F("stock") - quantity
+        self.sold = models.F("sold") + quantity
         self.last = datetime.now()
         self.save()
 
@@ -70,5 +73,5 @@ class Order(BaseModel):
             raise ValidationError(_("Not enough stock"))
         order = Order.create(item, quantity)
         order.save()
-        item.buy(id, buy)
+        item.buy(quantity)
         return order

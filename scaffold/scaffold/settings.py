@@ -47,7 +47,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = settings.SECRET_KEY
+SECRET_KEY = settings.SECRET_KEY.get_secret_value()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = settings.DEBUG
@@ -178,6 +178,6 @@ if settings.SENTRY_DSN:
         # environment variable, or infer a git commit
         # SHA as release, however you may want to set
         # something more human-readable.
-        release="V1.0.2",
+        # release="5aa37b355781ff1484e0061a765bd0af2af5a1e8",
         environment=settings.ENV_NAME,
     )

@@ -22,7 +22,8 @@
             "request": "launch",
             "program": "${workspaceFolder}\\scaffold\\manage.py",
             "args": [
-                "test"
+                "test",
+                "api"
             ],
             "django": true,
             "justMyCode": true

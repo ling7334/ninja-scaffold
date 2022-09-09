@@ -1,9 +1,8 @@
 from datetime import datetime
 from typing import List
 
+from api.models import Item, Order
 from ninja import Field, ModelSchema, Schema
-
-from .models import Item, Order
 
 
 class ErrResponse(Schema):
